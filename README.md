@@ -37,13 +37,13 @@ AlphaAgent uses LangGraph's **explicit `StateGraph`** with a **Supervisor Patter
 
 ```mermaid
 graph TD
-    START((🎯 User Query)) --> Supervisor
+    START(("🎯 User Query")) --> Supervisor
 
     Supervisor -->|"route: researcher"| MacroResearcher["🌐 Macro Researcher"]
     Supervisor -->|"route: quant"| QuantAnalyst["📊 Quant Analyst"]
     Supervisor -->|"route: backtest"| BacktestEngineer["⚙️ Backtest Engineer"]
     Supervisor -->|"route: approve"| HITLGate["🛡️ HITL Approval Gate"]
-    Supervisor -->|"route: FINISH"| END((✅ END))
+    Supervisor -->|"route: FINISH"| END(("✅ END"))
 
     MacroResearcher --> Supervisor
     QuantAnalyst --> Supervisor
