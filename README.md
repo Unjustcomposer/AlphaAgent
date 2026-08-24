@@ -71,33 +71,33 @@ User enters ticker (e.g., AAPL)
         │
         ▼
 ┌─────────────────┐
-│   Supervisor     │◄──────────────────────────────────┐
-│   (LLM Router)   │                                    │
+│   Supervisor    │ ◄──────────────────────────────────┐
+│   (LLM Router)  │                                    │
 └────────┬────────┘                                    │
          │ Evaluates state, picks next agent           │
          ▼                                             │
-   ┌─────────────┐    ┌──────────────┐                │
-   │  Researcher  │    │ Quant Analyst │                │
-   │  (DuckDuckGo)│    │  (yfinance)   │                │
-   └──────┬──────┘    └──────┬───────┘                │
-          │                   │                         │
-          └─────┬─────────────┘                         │
-                ▼                                       │
-        ┌───────────────┐                               │
-        │   Backtest     │                               │
-        │   Engineer     │                               │
-        │  (subprocess)  │                               │
-        └───────┬───────┘                               │
-                ▼                                       │
-        ┌───────────────┐     ❌ Rejected ──────────────┘
-        │  HITL Gate     │
-        │  (interrupt)   │
+   ┌─────────────┐    ┌──────────────┐                 │
+   │ Researcher  │    │ Quant Analyst│                 │
+   │ (DuckDuckGo)│    │  (yfinance)  │                 │
+   └──────┬──────┘    └──────┬───────┘                 │
+          │                  │                         │
+          └─────┬────────────┘                         │
+                ▼                                      │
+        ┌───────────────┐                              │
+        │   Backtest    │                              │
+        │   Engineer    │                              │
+        │  (subprocess) │                              │
+        └───────┬───────┘                              │
+                ▼                                      │
+        ┌───────────────┐     ❌ Rejected ─────────────┘
+        │  HITL Gate    │
+        │  (interrupt)  │
         └───────┬───────┘
                 │ ✅ Approved
                 ▼
         ┌───────────────┐
-        │ Report Writer  │ → output/strategy_report.md
-        │                │ → output/equity_curve.png
+        │ Report Writer │ → output/strategy_report.md
+        │               │ → output/equity_curve.png
         └───────────────┘
 ```
 
