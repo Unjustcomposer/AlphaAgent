@@ -94,7 +94,7 @@ User enters ticker (e.g., AAPL)
         │  HITL Gate    │
         │  (interrupt)  │
         └───────┬───────┘
-                │ ✅ Approved
+                │  Approved
                 ▼
         ┌───────────────┐
         │ Report Writer │ → output/strategy_report.md
