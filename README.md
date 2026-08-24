@@ -89,7 +89,7 @@ User enters ticker (e.g., AAPL)
         │  (subprocess) │                              │
         └───────┬───────┘                              │
                 ▼                                      │
-        ┌───────────────┐     ❌ Rejected ─────────────┘
+        ┌───────────────┐        Rejected ─────────────┘
         │  HITL Gate    │
         │  (interrupt)  │
         └───────┬───────┘
