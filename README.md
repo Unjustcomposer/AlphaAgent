@@ -36,21 +36,21 @@
 AlphaAgent uses LangGraph's **explicit `StateGraph`** with a **Supervisor Pattern** — a central routing node that delegates to specialized worker agents based on typed state transitions.
 
 ```mermaid
-graph TD
+flowchart TD
     START(("🎯 User Query")) --> Supervisor
 
-    Supervisor -->|"route: researcher"| MacroResearcher["🌐 Macro Researcher"]
-    Supervisor -->|"route: quant"| QuantAnalyst["📊 Quant Analyst"]
-    Supervisor -->|"route: backtest"| BacktestEngineer["⚙️ Backtest Engineer"]
-    Supervisor -->|"route: approve"| HITLGate["🛡️ HITL Approval Gate"]
-    Supervisor -->|"route: FINISH"| END(("✅ END"))
+    Supervisor -- "route: researcher" --> MacroResearcher["🌐 Macro Researcher"]
+    Supervisor -- "route: quant" --> QuantAnalyst["📊 Quant Analyst"]
+    Supervisor -- "route: backtest" --> BacktestEngineer["⚙️ Backtest Engineer"]
+    Supervisor -- "route: approve" --> HITLGate["🛡️ HITL Approval Gate"]
+    Supervisor -- "route: FINISH" --> END(("✅ END"))
 
     MacroResearcher --> Supervisor
     QuantAnalyst --> Supervisor
     BacktestEngineer --> Supervisor
 
-    HITLGate -->|"✅ Approved"| ReportGenerator["📝 Report Generator"]
-    HITLGate -->|"❌ Rejected"| Supervisor
+    HITLGate -- "✅ Approved" --> ReportGenerator["📝 Report Generator"]
+    HITLGate -- "❌ Rejected" --> Supervisor
 
     ReportGenerator --> END
 
