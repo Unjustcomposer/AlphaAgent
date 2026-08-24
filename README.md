@@ -132,6 +132,8 @@ The most capable agent. Takes technical + macro intelligence, formulates a tradi
 
 Uses LangGraph's `interrupt_before` compile option to **pause the entire state graph** before this node executes. The human portfolio manager reviews the generated hypothesis and backtest metrics in the terminal, then approves or rejects. On rejection, execution loops back to the Supervisor for revision.
 
+![HITL Approval Gate Terminal](assets/hitl_prompt.png)
+
 ### 📝 Report Generator — *The Final Output*
 > **File:** [`graph.py`](src/graph.py) (inline node)
 
