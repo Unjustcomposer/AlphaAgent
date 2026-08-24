@@ -36,6 +36,7 @@
 AlphaAgent uses LangGraph's **explicit `StateGraph`** with a **Supervisor Pattern** — a central routing node that delegates to specialized worker agents based on typed state transitions.
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 flowchart TD
     START(("🎯 User Query")) --> Supervisor
 
