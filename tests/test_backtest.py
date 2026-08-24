@@ -1,5 +1,8 @@
-from src.tools.backtest import run_backtest
 import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from src.tools.backtest import run_backtest
 
 def test_backtest_tool():
     # A sample script that the Backtest Engineer would generate

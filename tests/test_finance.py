@@ -1,4 +1,8 @@
 import json
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.tools.finance import fetch_stock_data, calculate_technical_indicators
 
 def test_finance_tools():

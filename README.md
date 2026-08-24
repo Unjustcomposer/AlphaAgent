@@ -167,9 +167,9 @@ AlphaAgent/
 ├── output/                      # Generated artifacts (git-ignored)
 │   ├── strategy_report.md       # Final strategy report
 │   └── equity_curve.png         # Backtest equity curve plot
-│
-├── test_finance.py              # Tool verification: finance data + TA
-└── test_backtest.py             # Tool verification: subprocess executor
+├── tests/
+│   ├── test_finance.py          # Tool verification: finance data + TA
+│   └── test_backtest.py         # Tool verification: subprocess executor
 ```
 
 ---
@@ -250,8 +250,8 @@ Do you approve this strategy for final report generation? (yes/no): yes
 ### 4. Verify Tools (Optional)
 
 ```bash
-python test_finance.py    # Tests yfinance data fetching + TA indicators
-python test_backtest.py   # Tests sandboxed code execution
+python tests/test_finance.py    # Tests yfinance data fetching + TA indicators
+python tests/test_backtest.py   # Tests sandboxed code execution
 ```
 
 ---
