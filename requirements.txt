@@ -1,0 +1,8 @@
+langgraph>=0.2.0
+langchain-core>=0.2.0
+langchain-google-genai>=1.0.0
+yfinance>=0.2.40
+pandas>=2.0.0
+matplotlib>=3.8.0
+duckduckgo-search>=6.0.0
+python-dotenv>=1.0.0
